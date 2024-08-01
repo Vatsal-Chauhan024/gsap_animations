@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    overflow-x: hidden;
+    background-origin: #141414;
+}
+
+
+.img-1{
+    background-image: url("./assets/01.jpg");
+}
+
+.img-2{
+    background-image: url("./assets/02.jpg");
+}
+
+.img-3{
+    background-image: url("./assets/03.jpg");
+}
+
+.imagepiece{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+}
+
+.piece1{
+    background-position: 0 0px;
+}
+.piece2{
+    background-position: 0 -100px;
+}
+.piece3{
+    background-position: 0 -200px;
+}
+.piece4{
+    background-position: 0 -300px;
+}
+.piece5{
+    background-position: 0 -400px;
+}
+
+@layer components{
+    .image{
+        mask-image: url(./assets/circle.png);
+        -webkit-mask-attachment: url(./assets/circle.png);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        height: 100%;
+    }
+    .text-stroke{
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 1px;
+    }
+    .perspective{
+        perspective: 2200px;
+    }
+}
+.animating {
+    animation: spins 3s infinite !important;
+}
+
